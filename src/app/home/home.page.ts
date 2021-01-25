@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Color } from '../model/colors.model';
+import { ColorsService } from '../services/colors.service';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,13 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  colors: Color[] = [];
+  constructor(private colorService: ColorsService) {
+    this.colorService.getColors().subscribe(res => {
+      this.colors = res.data;
+    })
+  }
+
+
 
 }

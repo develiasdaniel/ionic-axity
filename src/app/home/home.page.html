@@ -1,20 +1,27 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Colores
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-list>
+    <ion-item *ngFor="let color of colors">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>{{color.name}}</ion-card-title>
+          <div class="color-sample" [ngStyle]="{'background':color.color}"></div>
+        </ion-card-header>
+        <ion-card-content>
+            ID: {{color.id}} <br>
+            Nombre: {{color.name}} <br>
+            Año: {{color.year}} <br>
+            Color: {{color.color}} <br>
+            Pantone: {{color.pantone_value}} <br>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
 </ion-content>
