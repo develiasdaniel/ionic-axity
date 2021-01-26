@@ -1,8 +1,8 @@
 export class LoginRequest {
-    email: string;
-    password: string;
+  email: string;
+  password: string;
 }
 
-export class LoginRespose{
-    token: string;
+export class LoginRespose {
+  token: string;
 }

@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
-    <ion-title>
-      Colores
-    </ion-title>
+    <ion-title> Colores </ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
@@ -11,14 +9,17 @@
       <ion-card (click)="itemClick(color.id)">
         <ion-card-header>
           <ion-card-title>{{color.name}}</ion-card-title>
-          <div class="color-sample" [ngStyle]="{'background':color.color}"></div>
+          <div
+            class="color-sample"
+            [ngStyle]="{'background':color.color}"
+          ></div>
         </ion-card-header>
         <ion-card-content>
-            ID: {{color.id}} <br>
-            Nombre: {{color.name}} <br>
-            Año: {{color.year}} <br>
-            Color: {{color.color}} <br>
-            Pantone: {{color.pantone_value}} <br>
+          ID: {{color.id}} <br />
+          Nombre: {{color.name}} <br />
+          Año: {{color.year}} <br />
+          Color: {{color.color}} <br />
+          Pantone: {{color.pantone_value}} <br />
         </ion-card-content>
       </ion-card>
     </ion-item>

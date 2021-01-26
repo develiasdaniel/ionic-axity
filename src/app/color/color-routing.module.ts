@@ -1,13 +1,13 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
 
-import { ColorPage } from './color.page';
+import { ColorPage } from "./color.page";
 
 const routes: Routes = [
   {
-    path: '',
-    component: ColorPage
-  }
+    path: "",
+    component: ColorPage,
+  },
 ];
 
 @NgModule({
