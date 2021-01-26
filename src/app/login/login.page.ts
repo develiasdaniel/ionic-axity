@@ -37,9 +37,12 @@ export class LoginPage implements OnInit {
          alert('e-mail o contraseña inválidos');
        }
     }, err => {
-      console.log("err");
       alert('e-mail o contraseña inválidos');
     });
+  }
+
+  goToRegister(){
+    this.router.navigate(['register']);
   }
 
 }

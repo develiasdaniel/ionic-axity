@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [formGroup]="formRegister">
+  <ion-input placeholder="E-mail" formControlName="email"></ion-input>
+  <ion-input
+    type="password"
+    placeholder="Contraseña"
+    formControlName="password"
+  ></ion-input>
+  <ion-input
+    type="password"
+    formControlName="confirmPassword"
+    placeholder="Repite la contraseña"
+  ></ion-input>
+  <ion-button
+    expand="block"
+    [disabled]="formRegister.invalid"
+    (click)="registerClick()"
+    >Registrarse</ion-button
+  >
+  <ion-item
+    class="form-text error"
+    *ngIf="formRegister.controls.confirmPassword.touched && formRegister.hasError('mismatchedPasswords')"
+  >
+    <ion-label color="danger">Contraseñas no coinciden</ion-label>
+  </ion-item>
+</ion-content>
+<ion-footer>
+  <ion-button expand="block" (click)="goToLogin()" color="light"
+    >Login</ion-button
+  >
+</ion-footer>
