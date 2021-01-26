@@ -6,6 +6,10 @@ export interface ColorsResponse {
         data:Color[];
 }
 
+export interface ColorResponse{
+    data: Color;
+}
+
 export interface Color {
     id:number;
     name:string;

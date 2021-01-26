@@ -11,7 +11,7 @@ const routes: Routes = [
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'color',
+    path: 'color/:id',
     loadChildren: () => import('./color/color.module').then( m => m.ColorPageModule)
   },
   {
